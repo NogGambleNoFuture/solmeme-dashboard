@@ -1,0 +1,20 @@
+:root{--bg:#071022;--card:#0f1720;--muted:#8693a2;--gain:#7cffb2;--loss:#ff7b7b;--accent:#00d1a1}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:#e6eef6}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:linear-gradient(90deg,#071022,#081827);position:sticky;top:0;z-index:5}
+.brand{font-weight:700}
+.container{padding:14px}
+.card{background:var(--card);padding:12px;border-radius:8px}
+.table-wrap{overflow:auto}
+table{width:100%;border-collapse:collapse;color:#e6eef6;margin-top:8px}
+th,td{padding:8px;border-bottom:1px solid rgba(255,255,255,0.03);font-size:13px}
+th{color:var(--muted);text-align:left}
+.trade-btn{background:linear-gradient(90deg,#00ffb3,#00d1ff);color:#001820;padding:6px 10px;border-radius:6px;border:none;cursor:pointer}
+.flash-green{animation:flashGreen 1s ease-in-out;box-shadow:0 0 12px rgba(0,255,150,0.12)}
+@keyframes flashGreen{0%{box-shadow:0 0 0 rgba(0,255,150,0)}50%{box-shadow:0 0 20px rgba(0,255,150,0.4)}100%{box-shadow:0 0 0 rgba(0,255,150,0)}}
+.flash-red{animation:flashRed 1s ease-in-out;box-shadow:0 0 12px rgba(255,80,80,0.12)}
+@keyframes flashRed{0%{box-shadow:0 0 0 rgba(255,80,80,0)}50%{box-shadow:0 0 20px rgba(255,80,80,0.4)}100%{box-shadow:0 0 0 rgba(255,80,80,0)}}
+.side-tabs{display:flex;gap:6px;margin-bottom:8px}
+.tab{padding:6px 8px;border-radius:6px;background:#081426;cursor:pointer}
+.tab.active{background:#0b2940;color:#fff;font-weight:700}
+.trade-log{max-height:300px;overflow:auto}
+@media (max-width:900px){table,thead,tbody,th,td,tr{display:block}thead{display:none}tr{margin-bottom:10px}td{padding:8px;position:relative;padding-left:40%}td:before{position:absolute;left:10px;top:8px;width:35%;white-space:nowrap;font-weight:700;color:var(--muted)}td:nth-of-type(1):before{content:"#"}td:nth-of-type(2):before{content:"Name"}td:nth-of-type(3):before{content:"Sym"}td:nth-of-type(4):before{content:"Price"}td:nth-of-type(5):before{content:"1h%"}td:nth-of-type(6):before{content:"24h%"}td:nth-of-type(7):before{content:"Trade"}}
